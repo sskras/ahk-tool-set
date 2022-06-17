@@ -9,6 +9,7 @@ ControlGetText, var_new_data_file, Edit1, ahk_exe ibaAnalyzer.exe
 Send {Enter}
 Sleep 600
 Send {Alt down}f{Alt up}
+Send {Up 8}{Enter}
 return
 
 
