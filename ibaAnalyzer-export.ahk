@@ -6,6 +6,8 @@
 ;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
 ControlGetText, var_new_data_file, Edit1, ahk_exe ibaAnalyzer.exe
 ; MsgBox Read: %var_new_data_file%
+StringReplace var_save_text_file, var_new_data_file, .dat, .txt
+MsgBox Read: %var_save_text_file%
 
 Send {Enter}
 Sleep 600
