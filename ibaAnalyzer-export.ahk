@@ -25,6 +25,7 @@ Sleep 1000
 ;   Via https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907 ;
 ;   Via https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic ;
 ControlSetText, Edit1, %var_save_text_file%, Save text file ahk_exe ibaAnalyzer.exe
+Send {Enter}
 return
 
 
