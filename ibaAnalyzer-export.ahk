@@ -6,5 +6,5 @@
 ;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
 ControlGetText, var_new_data_file, Edit1, ahk_exe ibaAnalyzer.exe
 MsgBox Read: %var_new_data_file%
-SendInput {Enter}
+Send {Enter}
 return
