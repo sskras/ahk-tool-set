@@ -6,6 +6,7 @@
 ;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
 ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
 ; MsgBox Read: %var_new_data_file%
+;   Via https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar ;
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; MsgBox Read: %var_save_text_file%
 
@@ -21,6 +22,8 @@ Send {Enter}
 Sleep 1000
 ; Send %var_new_data_file%
 ; SendInput %var_new_data_file%
+;   Via https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907 ;
+;   Via https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic ;
 ControlSetText, Edit1, %var_save_text_file%, Save text file ahk_exe ibaAnalyzer.exe
 return
 
