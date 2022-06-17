@@ -7,4 +7,6 @@
 ControlGetText, var_new_data_file, Edit1, ahk_exe ibaAnalyzer.exe
 MsgBox Read: %var_new_data_file%
 Send {Enter}
+Sleep 600
+Send !f 
 return
