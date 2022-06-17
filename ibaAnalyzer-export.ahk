@@ -4,7 +4,7 @@
 ; saukrs:
 ;   Via https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452 ;
 ;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
-ControlGetText, var_new_data_file, Edit1, ahk_exe ibaAnalyzer.exe
+ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
 ; MsgBox Read: %var_new_data_file%
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; MsgBox Read: %var_save_text_file%
