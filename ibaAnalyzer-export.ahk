@@ -6,6 +6,7 @@
 ;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
 ControlGetText, var_new_data_file, Edit1, ahk_exe ibaAnalyzer.exe
 ; MsgBox Read: %var_new_data_file%
+
 Send {Enter}
 Sleep 600
 Send {Alt down}f{Alt up}
@@ -14,6 +15,7 @@ Send {Tab 6}
 Send +{Left 4}60
 Send {Tab 3}
 Send {Down}
+Send {Enter}
 return
 
 
