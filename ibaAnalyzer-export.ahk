@@ -7,7 +7,7 @@
 ControlGetText, var_new_data_file, Edit1, ahk_exe ibaAnalyzer.exe
 ; MsgBox Read: %var_new_data_file%
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
-MsgBox Read: %var_save_text_file%
+; MsgBox Read: %var_save_text_file%
 
 Send {Enter}
 Sleep 600
@@ -21,7 +21,7 @@ Send {Enter}
 Sleep 1000
 ; Send %var_new_data_file%
 ; SendInput %var_new_data_file%
-ControlSetText, Edit1, %var_new_data_file%, Save text file ahk_exe ibaAnalyzer.exe
+ControlSetText, Edit1, %var_save_text_file%, Save text file ahk_exe ibaAnalyzer.exe
 return
 
 
