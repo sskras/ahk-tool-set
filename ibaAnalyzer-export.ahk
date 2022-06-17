@@ -16,6 +16,8 @@ Send +{Left 4}60
 Send {Tab 3}
 Send {Down}
 Send {Enter}
+Sleep 1000
+ControlSetText, Edit1, %var_new_data_file%, Save text file ahk_exe ibaAnalyzer.exe
 return
 
 
