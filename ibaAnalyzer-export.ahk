@@ -10,6 +10,7 @@ Send {Enter}
 Sleep 600
 Send {Alt down}f{Alt up}
 Send {Up 8}{Enter}
+Send {Tab 6}
 return
 
 
