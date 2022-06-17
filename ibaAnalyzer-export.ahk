@@ -13,6 +13,7 @@ Send {Up 8}{Enter}
 Send {Tab 6}
 Send +{Left 4}60
 Send {Tab 3}
+Send {Down}
 return
 
 
