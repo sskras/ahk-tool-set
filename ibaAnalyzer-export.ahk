@@ -24,7 +24,7 @@ Sleep 600 ;ms
 Send {Alt down}f{Alt up}
 Send {Up 8}{Enter}
 Send {Tab 6}
-Send +{Left 4}60
+Send +{Left 4}60 ; changing "0.2" s defaults to "60" s
 Send {Tab 3}
 Send {Down}
 Send {Enter}
@@ -44,32 +44,40 @@ ControlFocus, IBA_PDOView1, ahk_class Afx:0000000140000000:b:0000000000010003:00
 Send {Ctrl down}d{Ctrl up}
 return
 
+; End-of-Code
+
 
 ; The `Open new data file` dialog box:
 ;
+; ------------------------------------
 ; Open new data file 
 ; ahk_class #32770
 ; ahk_exe ibaAnalyzer.exe
 ; ahk_pid 6228
 ; 
 ; ClassNN:	Edit1
+; ------------------------------------
 
 
 ; The main app window:
 ;
+; ------------------------------------
 ; 220209_EL_Harmonic_Rev_C.pdo - C:\Users\saukrs\Downloads\REC3_EL12_2022-06-07_00.13.56.dat - ibaAnalyzer v7.3.6 (x64)
 ; ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B
 ; ahk_exe ibaAnalyzer.exe
 ; ahk_pid 6228
 ; 
 ; ClassNN:	IBA_PDOView1
+; ------------------------------------
 
 
 ; The `Save text file` dialog box:
 ;
+; ------------------------------------
 ; Save text file
 ; ahk_class #32770
 ; ahk_exe ibaAnalyzer.exe
 ; ahk_pid 6228
 ; 
 ; ClassNN:	Edit1
+; ------------------------------------
