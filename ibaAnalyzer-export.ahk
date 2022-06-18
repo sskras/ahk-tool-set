@@ -1,25 +1,25 @@
 ; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd @ Siemens Energy @ Erlangen).
 
 var_demo_delay := 400 ;ms
-; Via https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters ;
+; Via: https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters
 var_default_delay := 10 ;ms
 var_current_delay := var_default_delay
 
 ; Let's do the main work:
 ;
 #IfWinActive, ahk_class #32770 ahk_exe ibaAnalyzer.exe
-;   Via https://www.autohotkey.com/docs/Hotkeys.htm#Remarks ;
+; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
 ~RButton::
 ; ^Enter::
-;   Via https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452 ;
-;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
+; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
+; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
 ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
 ; MsgBox Read: %var_new_data_file%
-;   Via https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar ;
+; Via: https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; MsgBox Read: %var_save_text_file%
 
-;   Via https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708 ;
+; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
 SetKeyDelay var_current_delay
 
 Sleep 200 ;ms
@@ -35,15 +35,15 @@ Send {Enter}
 Sleep 1000 ;ms
 ; Send %var_new_data_file%
 ; SendInput %var_new_data_file%
-;   Via https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907 ;
-;   Via https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic ;
+; Via: https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907
+; Via: https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic
 ControlSetText, Edit1, %var_save_text_file%, Save text file ahk_exe ibaAnalyzer.exe
 Send {Enter}
 Sleep 400 ;ms
-;   Via https://www.autohotkey.com/boards/viewtopic.php?t=62395#p265596 ;
-;   Via https://www.autohotkey.com/docs/commands/WinActivate.htm ;
+; Via: https://www.autohotkey.com/boards/viewtopic.php?t=62395#p265596
+; Via: https://www.autohotkey.com/docs/commands/WinActivate.htm
 WinActivate, ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B ahk_exe ibaAnalyzer.exe
-;   Via https://www.autohotkey.com/docs/commands/ControlFocus.htm#ExBasic ;
+; Via: https://www.autohotkey.com/docs/commands/ControlFocus.htm#ExBasic
 ControlFocus, IBA_PDOView1, ahk_exe ibaAnalyzer.exe
 Send {Ctrl down}d{Ctrl up}
 return
@@ -69,7 +69,7 @@ Return
 
 
 ; Quit the script (after the job is done):
-;   Via https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
+; Via: https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
 ^+q::ExitApp
 
 
