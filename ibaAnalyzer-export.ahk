@@ -2,7 +2,7 @@
 
 ; Via https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters ;
 var_default_delay := 10 ;ms
-var_demo_delay := 300 ;ms
+var_demo_delay := 400 ;ms
 var_current_delay := var_default_delay
 
 ; Demo mode enabled using delay:
@@ -52,7 +52,9 @@ Send {Up 8}{Enter}
 Send {Tab 6}
 Send +{Left 4}60 ; changing "0.2" s defaults to "60" s
 Send {Tab 3}
+Sleep 200 ;ms
 Send {Down}
+Sleep 200 ;ms
 Send {Down}
 Send {Enter}
 Sleep 1000 ;ms
