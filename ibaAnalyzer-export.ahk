@@ -24,6 +24,7 @@ StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
 SetKeyDelay var_current_delay
 
+; ControlFocus, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
 Send {Enter}
 WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:00000000.+ ahk_exe ibaAnalyzer.exe, Main Toolbar
 Send {Alt down}f{Alt up}
