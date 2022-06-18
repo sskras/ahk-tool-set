@@ -5,27 +5,6 @@ var_demo_delay := 400 ;ms
 var_default_delay := 10 ;ms
 var_current_delay := var_default_delay
 
-; Demo mode enabled using delay:
-^+d::
-if (var_current_delay = var_default_delay)
-{
-    var_current_delay := var_demo_delay ;ms
-    MsgBox Enabling demo mode, setting delay: %var_current_delay% ms
-}
-else
-{
-    var_current_delay := 10 ;ms
-    MsgBox Disabling demo mode, setting delay: %var_current_delay% ms
-}
-Return
-
-; Reload the script (needed after content has changed during the run):
-^+r::Reload
-
-; Quit the script (after the job is done):
-;   Via https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
-^+q::ExitApp
-
 ; Let's do the main work:
 ;
 #IfWinActive, ahk_class #32770 ahk_exe ibaAnalyzer.exe
@@ -68,6 +47,31 @@ WinActivate, ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:
 ControlFocus, IBA_PDOView1, ahk_exe ibaAnalyzer.exe
 Send {Ctrl down}d{Ctrl up}
 return
+
+
+; Demo mode enabled using delay:
+^+d::
+if (var_current_delay = var_default_delay)
+{
+    var_current_delay := var_demo_delay ;ms
+    MsgBox Enabling demo mode, setting delay: %var_current_delay% ms
+}
+else
+{
+    var_current_delay := 10 ;ms
+    MsgBox Disabling demo mode, setting delay: %var_current_delay% ms
+}
+Return
+
+
+; Reload the script (needed after content has changed during the run):
+^+r::Reload
+
+
+; Quit the script (after the job is done):
+;   Via https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
+^+q::ExitApp
+
 
 ; End-of-Code
 
