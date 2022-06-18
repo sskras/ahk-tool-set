@@ -52,10 +52,7 @@ Send {Up 8}{Enter}
 Send {Tab 6}
 Send +{Left 4}60 ; changing "0.2" s defaults to "60" s
 Send {Tab 3}
-Sleep 200 ;ms
-Send {Down}
-Sleep 200 ;ms
-Send {Down}
+Send {Down 2}
 Send {Enter}
 Sleep 1000 ;ms
 ; Send %var_new_data_file%
