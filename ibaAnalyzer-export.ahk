@@ -46,7 +46,8 @@ WinActivate, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:000
 ; Via: https://www.autohotkey.com/docs/commands/ControlFocus.htm#ExBasic
 ControlFocus, IBA_PDOView1, ahk_exe ibaAnalyzer.exe
 Send {Ctrl down}d{Ctrl up}
-return
+Return
+#If
 
 
 ; Demo mode enabled using delay:
