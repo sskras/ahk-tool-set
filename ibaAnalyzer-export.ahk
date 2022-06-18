@@ -5,6 +5,7 @@ var_demo_delay := 400 ;ms
 var_default_delay := 10 ;ms
 var_current_delay := var_default_delay
 SetTitleMatchMode, RegEx
+SetTitleMatchMode, Slow
 
 ; Let's do the main work:
 ;
