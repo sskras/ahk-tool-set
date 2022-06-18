@@ -1,7 +1,14 @@
 ; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd.
 
+; Via https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters ;
+var_default_delay := 10 ;ms
+var_demo_delay := 300 ;ms
+var_current_delay := var_default_delay
+
 ; Demo mode enabled using delay:
+^+d::
 ; SetKeyDelay 300 ;ms
+Return
 
 ; Reload the script (needed after content has changed during the run):
 ^+r::Reload
@@ -23,6 +30,9 @@ ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyze
 ;   Via https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar ;
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; MsgBox Read: %var_save_text_file%
+
+;   Via https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708 ;
+SetKeyDelay var_current_delay
 
 Sleep 200 ;ms
 Send {Enter}
