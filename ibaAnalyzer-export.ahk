@@ -16,7 +16,7 @@ ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyze
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; MsgBox Read: %var_save_text_file%
 
-Sleep 100
+Sleep 200
 Send {Enter}
 Sleep 600
 Send {Alt down}f{Alt up}
