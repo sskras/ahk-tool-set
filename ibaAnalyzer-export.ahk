@@ -34,7 +34,7 @@ Send +{Left 4}60 ; changing "0.2" s defaults to "60" s
 Send {Tab 3}
 Send {Down 2}
 Send {Enter}
-Sleep 1000 ;ms
+WinWaitActive, Save text file ahk_exe ibaAnalyzer.exe
 ; Send %var_new_data_file%
 ; SendInput %var_new_data_file%
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907
