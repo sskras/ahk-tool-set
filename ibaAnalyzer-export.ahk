@@ -1,4 +1,5 @@
 ^+r::Reload
+^+q::ExitApp
 
 ^+n::
 ; saukrs:
