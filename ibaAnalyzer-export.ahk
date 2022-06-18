@@ -1,15 +1,21 @@
-; saukrs:
+; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd.
 
+; Demo mode enabled using delay:
 ; SetKeyDelay 300 ;ms
 
+; Reload the script (needed after content has changed during the run):
 ^+r::Reload
+
+; Quit the script (after the job is done):
 ;   Via https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
 ^+q::ExitApp
 
+; Let's do the main work:
+;
 #IfWinActive, ahk_class #32770 ahk_exe ibaAnalyzer.exe
 ;   Via https://www.autohotkey.com/docs/Hotkeys.htm#Remarks ;
-; ^Enter::
 ~RButton::
+; ^Enter::
 ;   Via https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452 ;
 ;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
 ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
