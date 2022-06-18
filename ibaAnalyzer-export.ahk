@@ -8,6 +8,16 @@ var_current_delay := var_default_delay
 ; Demo mode enabled using delay:
 ^+d::
 ; SetKeyDelay 300 ;ms
+if (var_current_delay = var_default_delay)
+{
+    var_current_delay := var_demo_delay ;ms
+    MsgBox Enabling demo mode, setting delay: %var_current_delay% ms
+}
+else
+{
+    var_current_delay := 10 ;ms
+    MsgBox Disabling demo mode, setting delay: %var_current_delay% ms
+}
 Return
 
 ; Reload the script (needed after content has changed during the run):
