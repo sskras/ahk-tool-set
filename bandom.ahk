@@ -37,3 +37,11 @@ return
 ControlGetText, OutputVar, Edit1, *Untitled - Notepad
 MsgBox Read: %OutputVar%
 return
+
+
+^+c::
+; Via: https://www.autohotkey.com/board/topic/6717-how-to-find-autohotkey-directory/#entry40735
+cl := DllCall( "GetCommandLine", "str" )
+StringMid, path_AHk, cl, 2, InStr( cl, """", true, 2 )-2
+MsgBox, %path_AHk%
+Return
