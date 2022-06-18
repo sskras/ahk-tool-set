@@ -1,4 +1,4 @@
-; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd.
+; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd @ Siemens Energy @ Erlangen).
 
 ; Via https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters ;
 var_default_delay := 10 ;ms
