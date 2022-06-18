@@ -1,5 +1,7 @@
 ; saukrs:
 
+SetKeyDelay 300 ;ms
+
 ^+r::Reload
 ;   Via https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
 ^+q::ExitApp
@@ -16,9 +18,9 @@ ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyze
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; MsgBox Read: %var_save_text_file%
 
-Sleep 200
+Sleep 200 ;ms
 Send {Enter}
-Sleep 600
+Sleep 600 ;ms
 Send {Alt down}f{Alt up}
 Send {Up 8}{Enter}
 Send {Tab 6}
@@ -26,14 +28,14 @@ Send +{Left 4}60
 Send {Tab 3}
 Send {Down}
 Send {Enter}
-Sleep 1000
+Sleep 1000 ;ms
 ; Send %var_new_data_file%
 ; SendInput %var_new_data_file%
 ;   Via https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907 ;
 ;   Via https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic ;
 ControlSetText, Edit1, %var_save_text_file%, Save text file ahk_exe ibaAnalyzer.exe
 Send {Enter}
-Sleep 400
+Sleep 400 ;ms
 ;   Via https://www.autohotkey.com/boards/viewtopic.php?t=62395#p265596 ;
 ;   Via https://www.autohotkey.com/docs/commands/WinActivate.htm ;
 WinActivate, ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B ahk_exe ibaAnalyzer.exe
