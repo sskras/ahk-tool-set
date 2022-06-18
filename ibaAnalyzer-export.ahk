@@ -7,7 +7,7 @@ var_current_delay := var_default_delay
 
 ; Let's do the main work:
 ;
-#IfWinActive, ahk_class #32770 ahk_exe ibaAnalyzer.exe
+#IfWinActive, Open new data file ahk_class #32770 ahk_exe ibaAnalyzer.exe, Show Advanced
 ; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
 ~RButton::
 ; ^Enter::
@@ -42,7 +42,7 @@ Send {Enter}
 Sleep 400 ;ms
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=62395#p265596
 ; Via: https://www.autohotkey.com/docs/commands/WinActivate.htm
-WinActivate, ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B ahk_exe ibaAnalyzer.exe
+WinActivate, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B ahk_exe ibaAnalyzer.exe
 ; Via: https://www.autohotkey.com/docs/commands/ControlFocus.htm#ExBasic
 ControlFocus, IBA_PDOView1, ahk_exe ibaAnalyzer.exe
 Send {Ctrl down}d{Ctrl up}
