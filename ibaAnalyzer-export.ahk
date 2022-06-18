@@ -51,7 +51,7 @@ Send {Alt down}f{Alt up}
 Send {Up 8}{Enter}
 Send {Tab 6}
 Send +{Left 4}60 ; changing "0.2" s defaults to "60" s
-Send {Tab 3}
+Send {Tab 4}
 Send {Down}
 Send {Enter}
 Sleep 1000 ;ms
