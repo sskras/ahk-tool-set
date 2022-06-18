@@ -88,6 +88,42 @@ Return
 ; ahk_pid 6228
 ; 
 ; ClassNN:	Edit1
+; Visible Text:
+;   OK
+;   Close
+;   Tree1
+;   Preferred folders:
+;   List
+;   Report
+;   Up
+;   New
+;   +
+;   -
+;   List1
+;   Path:
+;   File:
+;   C:\Users\saukrs\Downloads
+;   Append files on multiselect
+;   Search
+;   Show Advanced
+;   Info
+;   Tree
+;   Preview
+;   List
+;   Report
+;   Add
+;   Del
+;   Clear
+;   Load
+;   Save
+;   Open from File Group
+;   File type:
+;   Start Time:
+;   File time:
+;   Sampling time:
+;   File:
+;   [0:0]
+;   Preview signal:
 ; ------------------------------------
 
 
@@ -100,6 +136,16 @@ Return
 ; ahk_pid 6228
 ; 
 ; ClassNN:	IBA_PDOView1
+; Visible Text:
+;   Signals
+;   Signals
+;   Signal definitions
+;   Signal definitions
+;   E
+;   Reload
+;   File Group
+;   Main Toolbar
+;   Menu Bar
 ; ------------------------------------
 
 
@@ -112,4 +158,30 @@ Return
 ; ahk_pid 6228
 ; 
 ; ClassNN:	Edit1
+; Visible Text:
+;   OK
+;   Close
+;   Tree1
+;   Preferred folders:
+;   List
+;   Report
+;   Up
+;   New
+;   +
+;   -
+;   List1
+;   Path:
+;   File:
+;   C:\Users\saukrs\Downloads
+;   Info
+;   Tree
+;   Preview
+;   List
+;   Report
+;   Add
+;   Del
+;   Clear
+;   Load
+;   Save
+;   Open from File Group
 ; ------------------------------------
