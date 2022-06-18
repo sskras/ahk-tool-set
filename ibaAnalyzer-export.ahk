@@ -14,10 +14,10 @@ var_current_delay := var_default_delay
 ; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
 ; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
 ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
-; MsgBox Read: %var_new_data_file%
+; MsgBox, Read: %var_new_data_file%
 ; Via: https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
-; MsgBox Read: %var_save_text_file%
+; MsgBox, Read: %var_save_text_file%
 
 ; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
 SetKeyDelay var_current_delay
@@ -54,12 +54,12 @@ return
 if (var_current_delay = var_default_delay)
 {
     var_current_delay := var_demo_delay ;ms
-    MsgBox Enabling demo mode, setting delay: %var_current_delay% ms
+    MsgBox, Enabling demo mode, setting delay: %var_current_delay% ms
 }
 else
 {
     var_current_delay := 10 ;ms
-    MsgBox Disabling demo mode, setting delay: %var_current_delay% ms
+    MsgBox, Disabling demo mode, setting delay: %var_current_delay% ms
 }
 Return
 
