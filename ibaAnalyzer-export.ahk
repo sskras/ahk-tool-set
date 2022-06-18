@@ -1,9 +1,11 @@
+; saukrs:
+
 ^+r::Reload
 ;   Via https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
 ^+q::ExitApp
 
+;   Via https://www.autohotkey.com/docs/Hotkeys.htm#Remarks ;
 ~RButton::
-; saukrs:
 ;   Via https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452 ;
 ;   Via https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic ;
 ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
