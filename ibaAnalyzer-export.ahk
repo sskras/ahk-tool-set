@@ -1,6 +1,6 @@
 ; saukrs:
 
-SetKeyDelay 300 ;ms
+; SetKeyDelay 300 ;ms
 
 ^+r::Reload
 ;   Via https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
