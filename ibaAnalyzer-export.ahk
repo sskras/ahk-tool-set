@@ -1,13 +1,12 @@
 ; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd @ Siemens Energy @ Erlangen).
 
+var_demo_delay := 400 ;ms
 ; Via https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters ;
 var_default_delay := 10 ;ms
-var_demo_delay := 400 ;ms
 var_current_delay := var_default_delay
 
 ; Demo mode enabled using delay:
 ^+d::
-; SetKeyDelay 300 ;ms
 if (var_current_delay = var_default_delay)
 {
     var_current_delay := var_demo_delay ;ms
