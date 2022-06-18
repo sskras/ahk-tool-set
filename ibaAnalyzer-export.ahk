@@ -30,6 +30,8 @@ Sleep 400
 ;   Via https://www.autohotkey.com/boards/viewtopic.php?t=62395#p265596 ;
 ;   Via https://www.autohotkey.com/docs/commands/WinActivate.htm ;
 WinActivate, ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B ahk_exe ibaAnalyzer.exe
+;   Via https://www.autohotkey.com/docs/commands/ControlFocus.htm#ExBasic ;
+ControlFocus, IBA_PDOView1, ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B ahk_exe ibaAnalyzer.exe
 Send {Ctrl down}d{Ctrl up}
 return
 
