@@ -4,6 +4,7 @@ var_demo_delay := 400 ;ms
 ; Via: https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters
 var_default_delay := 10 ;ms
 var_current_delay := var_default_delay
+SetTitleMatchMode, RegEx
 
 ; Let's do the main work:
 ;
@@ -24,7 +25,7 @@ SetKeyDelay var_current_delay
 
 Sleep 200 ;ms
 Send {Enter}
-Sleep 600 ;ms
+WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:00000000.+ ahk_exe ibaAnalyzer.exe, Main Toolbar
 Send {Alt down}f{Alt up}
 Send {Up 8}{Enter}
 Send {Tab 6}
