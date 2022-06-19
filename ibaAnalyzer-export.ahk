@@ -29,10 +29,10 @@ SetKeyDelay var_current_delay                                                   
 
 ; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
 ; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
-ControlGetText, var_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
+ControlGetText, var_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe ; Read name of the file selected in the new data file selection dialog box
 ;MsgBox, Read: %var_new_data_file%
 ; Via: https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar
-StringReplace var_text_file, var_data_file, .dat, .txt
+StringReplace var_text_file, var_data_file, .dat, .txt                          ; In the just read name replace ".dat" => ".txt" and save into var_text_file
 ;MsgBox, Read: %var_save_text_file%
 
 ; ControlFocus, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
