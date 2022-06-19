@@ -45,19 +45,19 @@ Return                                                                          
 #If
 
 
-; ---------------------------- Demo mode enabled using delay: -----------------------------
+; ------------------------- Debug/demo mode enabled using delay: --------------------------
 ^+d::
 if (var_current_delay = var_default_delay)                                      ; If the current delay has default value ...
 {
     var_current_delay := var_demo_delay                                         ; ... then switch to the custom (usually a lot bigger) value to enable visual demonstration/debug of the performed steps
-    MsgBox, Enabling demo mode, setting delay: %var_current_delay% ms
+    MsgBox, Enabling debug/demo mode, setting delay: %var_current_delay% ms     ; ... and tell the debug/demo mode is enabled
 }
 else
 {
     var_current_delay := var_default_delay                                      ; ... else switch to the hopefully default value (default input pace)
-    MsgBox, Disabling demo mode, setting delay: %var_current_delay% ms
+    MsgBox, Disabling debug/demo mode, setting delay: %var_current_delay% ms    ; ... and tell the debug/demo mode is disabled
 }
-Return
+Return                                                                          ; The execution mode is switched
 
 
 ; ---------- Reload the script (needed after content has changed during the run): ---------
