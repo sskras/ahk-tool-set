@@ -13,6 +13,10 @@ SetTitleMatchMode, Slow
 ; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
 ~RButton up::
 ; ^Enter::
+
+; Via: https://www.autohotkey.com/docs/commands/Menu.htm#Icon
+Menu, Tray, Icon, Shell32.dll, 78
+
 ; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
 ; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
 ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
