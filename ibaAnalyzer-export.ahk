@@ -29,10 +29,10 @@ SetKeyDelay var_current_delay                                                   
 
 ; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
 ; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
-ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
+ControlGetText, var_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
 ;MsgBox, Read: %var_new_data_file%
 ; Via: https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar
-StringReplace var_save_text_file, var_new_data_file, .dat, .txt
+StringReplace var_text_file, var_data_file, .dat, .txt
 ;MsgBox, Read: %var_save_text_file%
 
 ; ControlFocus, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
@@ -50,7 +50,7 @@ WinWaitActive, Save text file ahk_exe ibaAnalyzer.exe
 ;SendInput %var_new_data_file%
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907
 ; Via: https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic
-ControlSetText, Edit1, %var_save_text_file%, Save text file ahk_exe ibaAnalyzer.exe
+ControlSetText, Edit1, %var_text_file%, Save text file ahk_exe ibaAnalyzer.exe
 Send {Enter}
 WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=62395#p265596
