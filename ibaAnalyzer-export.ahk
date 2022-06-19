@@ -7,6 +7,12 @@ var_current_delay := var_default_delay
 SetTitleMatchMode, RegEx
 SetTitleMatchMode, Slow
 
+; Via: https://www.autohotkey.com/board/topic/6717-how-to-find-autohotkey-directory/#entry40735
+var_cl := DllCall( "GetCommandLine", "str" )
+StringMid, var_path_AHK, var_cl, 2, InStr( var_cl, """", true, 2 )-2
+Return
+
+
 ; Let's do the main work:
 ;
 #IfWinActive, Open new data file ahk_class #32770 ahk_exe ibaAnalyzer.exe, Show Advanced
@@ -52,6 +58,9 @@ WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:0
 ; Via: https://www.autohotkey.com/docs/commands/ControlFocus.htm#ExBasic
 ControlFocus, IBA_PDOView1, ahk_exe ibaAnalyzer.exe
 Send {Ctrl down}d{Ctrl up}
+
+; Via: https://www.autohotkey.com/boards/viewtopic.php?t=33478#p155229
+Menu, Tray, Icon, %var_path_AHK%
 Return
 #If
 
