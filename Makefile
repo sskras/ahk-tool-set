@@ -3,4 +3,4 @@
 
 all:
 	echo Hello
-	/c/Program\ Files/AutoHotkey/Compiler/Ahk2Exe.exe /in ibaAnalyzer-export.ahk /out ibaAnalyzer-export.exe
+	MSYS2_ARG_CONV_EXCL="*" /c/Program\ Files/AutoHotkey/Compiler/Ahk2Exe.exe /in ibaAnalyzer-export.ahk /out ibaAnalyzer-export.exe
