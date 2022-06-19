@@ -1,7 +1,9 @@
 # 2022-06-19 saukrs: Compile some .ahk scripts into standalone .exe files
 #
 
-# Use the installed AHK compiler version:
+# Use the installed AHK compiler version;
+# Via: https://stackoverflow.com/questions/8941110/how-i-could-add-dir-to-path-in-makefile/36226832#36226832
+
 PATH := $(PATH):/c/Program\ Files/AutoHotkey/Compiler
 SHELL := env PATH=$(PATH) /bin/bash
 
