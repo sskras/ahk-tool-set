@@ -3,13 +3,11 @@
 ; --------------------------------- Script initialization ---------------------------------
 ;
 var_demo_delay := 400 ;ms                                                       ; Adjust the thing if debug/demo mode is too slow or too fast for you
-; Via: https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters
 var_default_delay := 10 ;ms                                                     ; This input delay value seems to be set by AHK by default, will be used when restoring the pace
 var_current_delay := var_default_delay                                          ; Set the script input pace to the default value
 SetTitleMatchMode, RegEx                                                        ; Matching titles using regular expressions (smart wildcards) as the class of main window get different suffix every run
 SetTitleMatchMode, Slow
 
-; Via: https://www.autohotkey.com/board/topic/6717-how-to-find-autohotkey-directory/#entry40735
 var_cl := DllCall( "GetCommandLine", "str" )                                    ; Get the whole AHK command line
 StringMid, var_path_AHK, var_cl, 2, InStr( var_cl, """", true, 2 )-2            ; Get the executable name from it (we will use it to extract default AHK icon)
 Return                                                                          ; Initialization complete (run once per script lifetime)
@@ -18,19 +16,13 @@ Return                                                                          
 ; -------------------------------- Let's do the main work: --------------------------------
 ;
 #IfWinActive, Open new data file ahk_exe ibaAnalyzer.exe, Show Advanced         ; If "Open new data file" from ibaAnalyzer.exe is not active, skip this block altogther
-; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
 ~RButton up::                                                                   ; Start processing data by clicking the right mouse button on the needed filename
 ^Enter::                                                                        ; Start processing data using <Ctrl-Enter> too
 
-; Via: https://www.autohotkey.com/docs/commands/Menu.htm#Icon
 Menu, Tray, Icon, Shell32.dll, 78                                               ; Set the big exclamation sign in system tray
-; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
 SetKeyDelay var_current_delay                                                   ; Set the computed delay: either the default (10ms), or the debug-friendly one (eg. 400ms), configured at the top of script
 
-; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
-; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
 ControlGetText, var_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe ; Read name of the file selected in the new data file selection dialog box
-; Via: https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar
 StringReplace var_text_file, var_data_file, .dat, .txt                          ; In the just read name replace ".dat" => ".txt" and save into var_text_file
 
 Send {Enter}                                                                    ; Press <Enter>, open the selected data file
@@ -43,8 +35,6 @@ Send {Tab 3}                                                                    
 Send {Down 2}                                                                   ; Select "Currently visualized signals (expressions)" radio button
 Send {Enter}                                                                    ; Press <Enter>, start exporting the data
 WinWaitActive, Save text file ahk_exe ibaAnalyzer.exe                           ; Go to the "Save text file" dialog box
-; Via: https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907
-; Via: https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic
 ControlSetText, Edit1, %var_text_file%, Save text file ahk_exe ibaAnalyzer.exe  ; Write name of the computed text file into the file saving dialog box
 Send {Enter}                                                                    ; Press <Enter> to actually export the text file
 WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar ; Return to the main app window
@@ -75,7 +65,6 @@ Return
 
 
 ; ------------------------ Quit the script (after the job is done): -----------------------
-; Via: https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
 ^+q::ExitApp
 
 ; -------------------------------------- End-of-Code --------------------------------------
