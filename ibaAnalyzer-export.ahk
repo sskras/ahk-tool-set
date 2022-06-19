@@ -1,5 +1,7 @@
 ; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd @ Siemens Energy @ Erlangen).
 
+; --------------------------------- Script initialization ---------------------------------
+;
 var_demo_delay := 400 ;ms                                                       ; Adjust the thing if debug/demo mode is too slow or too fast for you
 ; Via: https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters
 var_default_delay := 10 ;ms                                                     ; This input delay value seems to be set by AHK by default, will be used when restoring the pace
@@ -13,7 +15,7 @@ StringMid, var_path_AHK, var_cl, 2, InStr( var_cl, """", true, 2 )-2            
 Return                                                                          ; Initialization complete (run once per script lifetime)
 
 
-; Let's do the main work:
+; -------------------------------- Let's do the main work: --------------------------------
 ;
 #IfWinActive, Open new data file ahk_class #32770 ahk_exe ibaAnalyzer.exe, Show Advanced
 ; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
@@ -64,7 +66,7 @@ Return
 #If
 
 
-; Demo mode enabled using delay:
+; ---------------------------- Demo mode enabled using delay: -----------------------------
 ^+d::
 if (var_current_delay = var_default_delay)
 {
@@ -79,16 +81,15 @@ else
 Return
 
 
-; Reload the script (needed after content has changed during the run):
+; ---------- Reload the script (needed after content has changed during the run): ---------
 ^+r::Reload
 
 
-; Quit the script (after the job is done):
+; ------------------------ Quit the script (after the job is done): -----------------------
 ; Via: https://stackoverflow.com/questions/45700383/how-do-i-stop-an-active-autohotkey-script/45700384#45700384
 ^+q::ExitApp
 
-
-; End-of-Code
+; -------------------------------------- End-of-Code --------------------------------------
 
 
 ; The `Open new data file` dialog box:
