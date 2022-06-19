@@ -17,7 +17,7 @@ Return                                                                          
 
 ; -------------------------------- Let's do the main work: --------------------------------
 ;
-#IfWinActive, Open new data file ahk_class #32770 ahk_exe ibaAnalyzer.exe, Show Advanced
+#IfWinActive, Open new data file ahk_exe ibaAnalyzer.exe, Show Advanced
 ; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
 ~RButton up::                                                                   ; Start processing data by clicking the right mouse button on the needed filename
 ^Enter::                                                                        ; Start processing data using <Ctrl-Enter> too
@@ -37,7 +37,7 @@ StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 
 ; ControlFocus, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
 Send {Enter}
-WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:00000000.+ ahk_exe ibaAnalyzer.exe, Main Toolbar
+WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar
 Send {Alt down}f{Alt up}
 Send {Up 8}{Enter}
 Send {Tab 6}
@@ -52,7 +52,7 @@ WinWaitActive, Save text file ahk_exe ibaAnalyzer.exe
 ; Via: https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic
 ControlSetText, Edit1, %var_save_text_file%, Save text file ahk_exe ibaAnalyzer.exe
 Send {Enter}
-WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:00000000.+ ahk_exe ibaAnalyzer.exe, Main Toolbar
+WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=62395#p265596
 ; Via: https://www.autohotkey.com/docs/commands/WinActivate.htm
 ;WinActivate, 220209_EL_Harmonic_Rev_C.pdo - ahk_class Afx:0000000140000000:b:0000000000010003:0000000000000006:0000000000AD044B ahk_exe ibaAnalyzer.exe
