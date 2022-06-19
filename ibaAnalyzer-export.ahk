@@ -19,13 +19,13 @@ Return                                                                          
 ;
 #IfWinActive, Open new data file ahk_class #32770 ahk_exe ibaAnalyzer.exe, Show Advanced
 ; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
-~RButton up::
+~RButton up::                                                                   ; Start processing data by clicking the right mouse button on the needed filename
 ^Enter::                                                                        ; Start processing data using <Ctrl-Enter> too
 
 ; Via: https://www.autohotkey.com/docs/commands/Menu.htm#Icon
-Menu, Tray, Icon, Shell32.dll, 78                                               ; The big exclamation sign
+Menu, Tray, Icon, Shell32.dll, 78                                               ; Set the big exclamation sign in system tray
 ; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
-SetKeyDelay var_current_delay
+SetKeyDelay var_current_delay                                                   ; Set the computed delay: either the default (10ms), or the debug-friendly one (eg. 400ms), configured at the top of script
 
 ; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
 ; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
