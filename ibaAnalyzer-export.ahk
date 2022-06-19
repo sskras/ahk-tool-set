@@ -47,14 +47,14 @@ Return                                                                          
 
 ; ---------------------------- Demo mode enabled using delay: -----------------------------
 ^+d::
-if (var_current_delay = var_default_delay)
+if (var_current_delay = var_default_delay)                                      ; If the current delay has default value ...
 {
-    var_current_delay := var_demo_delay
+    var_current_delay := var_demo_delay                                         ; ... then switch to the custom (usually a lot bigger) value to enable visual demonstration/debug of the performed steps
     MsgBox, Enabling demo mode, setting delay: %var_current_delay% ms
 }
 else
 {
-    var_current_delay := var_default_delay
+    var_current_delay := var_default_delay                                      ; ... else switch to the hopefully default value (default input pace)
     MsgBox, Disabling demo mode, setting delay: %var_current_delay% ms
 }
 Return
