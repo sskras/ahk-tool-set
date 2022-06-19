@@ -45,8 +45,9 @@ Return                                                                          
 #If
 
 
-; ------------------------- Debug/demo mode enabled using delay: --------------------------
+; ------------------------------- Debug/demo mode switch: ---------------------------------
 ^+d::                                                                           ; <Ctrl-Shift-D>: switch the execution between default pace and a slower, debug/demo pace
+
 if (var_current_delay = var_default_delay)                                      ; If the current delay has default value ...
 {
     var_current_delay := var_demo_delay                                         ; ... then switch to the custom (usually a lot bigger) value to enable visual demonstration/debug of the performed steps
@@ -60,10 +61,10 @@ else
 Return                                                                          ; The execution mode is switched
 
 
-; ---------- Reload the script (needed after content has changed during the run): ---------
+; ---------------------------------- Reload the script ------------------------------------
 ^+r::Reload                                                                     ; <Ctrl-Shift-R>: needed in case content of the script has changed during the run and you want to use the new behavior
 
-; ------------------------ Quit the script (after the job is done): -----------------------
+; ------------------------------------ Quit the script: -----------------------------------
 ^+q::ExitApp                                                                    ; <Ctrl-Shift-Q>: no point in staying in background after the job is done
 
 ; -------------------------------------- End-of-Code --------------------------------------
