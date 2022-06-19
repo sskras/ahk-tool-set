@@ -20,7 +20,7 @@ Return                                                                          
 #IfWinActive, Open new data file ahk_class #32770 ahk_exe ibaAnalyzer.exe, Show Advanced
 ; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
 ~RButton up::
-; ^Enter::
+^Enter::                                                                        ; Start processing data using <Ctrl-Enter> too
 
 ; Via: https://www.autohotkey.com/docs/commands/Menu.htm#Icon
 Menu, Tray, Icon, Shell32.dll, 78                                               ; The big exclamation sign
