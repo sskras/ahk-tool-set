@@ -21,7 +21,7 @@ Return
 ; ^Enter::
 
 ; Via: https://www.autohotkey.com/docs/commands/Menu.htm#Icon
-Menu, Tray, Icon, Shell32.dll, 78
+Menu, Tray, Icon, Shell32.dll, 78                                               ; The big exclamation sign
 ; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
 SetKeyDelay var_current_delay
 
