@@ -17,7 +17,7 @@ Return                                                                          
 
 ; -------------------------------- Let's do the main work: --------------------------------
 ;
-#IfWinActive, Open new data file ahk_exe ibaAnalyzer.exe, Show Advanced
+#IfWinActive, Open new data file ahk_exe ibaAnalyzer.exe, Show Advanced         ; If "Open new data file" from ibaAnalyzer.exe is not active, skip this block altogther
 ; Via: https://www.autohotkey.com/docs/Hotkeys.htm#Remarks
 ~RButton up::                                                                   ; Start processing data by clicking the right mouse button on the needed filename
 ^Enter::                                                                        ; Start processing data using <Ctrl-Enter> too
