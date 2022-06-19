@@ -2,15 +2,15 @@
 
 var_demo_delay := 400 ;ms
 ; Via: https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters
-var_default_delay := 10 ;ms
+var_default_delay := 10 ;ms                                                     ; This input delay value seems to be set by AHK by default, will be used when restoring the pace
 var_current_delay := var_default_delay
-SetTitleMatchMode, RegEx
+SetTitleMatchMode, RegEx                                                        ; Matching titles using regular expressions (smart wildcards) as the class of main window get different suffix every run
 SetTitleMatchMode, Slow
 
 ; Via: https://www.autohotkey.com/board/topic/6717-how-to-find-autohotkey-directory/#entry40735
 var_cl := DllCall( "GetCommandLine", "str" )                                    ; Get the whole AHK command line
 StringMid, var_path_AHK, var_cl, 2, InStr( var_cl, """", true, 2 )-2            ; Get the executable name from it (we will use it to extract default AHK icon)
-Return
+Return                                                                          ; Initialization complete (run once per script lifetime)
 
 
 ; Let's do the main work:
