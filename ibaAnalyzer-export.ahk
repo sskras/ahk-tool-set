@@ -45,14 +45,14 @@ Send {Enter}                                                                    
 WinWaitActive, Save text file ahk_exe ibaAnalyzer.exe                           ; Go to the "Save text file" dialog box
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907
 ; Via: https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic
-ControlSetText, Edit1, %var_text_file%, Save text file ahk_exe ibaAnalyzer.exe
+ControlSetText, Edit1, %var_text_file%, Save text file ahk_exe ibaAnalyzer.exe  ; Write name of the computed text file into the file saving dialog box
 Send {Enter}
-WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar
+WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar ; Return to the main app window
 ; Via: https://www.autohotkey.com/docs/commands/ControlFocus.htm#ExBasic
-Send {Ctrl down}d{Ctrl up}
+Send {Ctrl down}d{Ctrl up}                                                      ; Press <Ctrl-D>, equivalent of menu > "File" > "Open Data File..."
 
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=33478#p155229
-Menu, Tray, Icon, %var_path_AHK%
+Menu, Tray, Icon, %var_path_AHK%                                                ; Restore the default AHK icon in system tray
 Return
 #If
 
