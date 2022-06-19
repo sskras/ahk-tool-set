@@ -20,7 +20,7 @@ Return                                                                          
 ^Enter::                                                                        ; Start processing data using <Ctrl-Enter> too
 
 Menu, Tray, Icon, Shell32.dll, 78                                               ; Set the big exclamation sign in system tray
-SetKeyDelay var_current_delay                                                   ; Set the computed delay: either the default (10ms), or the debug-friendly one (eg. 400ms), configured at the top of script
+SetKeyDelay var_current_delay                                                   ; Set the selected delay: either the default (10ms), or the debug-friendly one (eg. 400ms) both configured at the top of script
 
 ControlGetText, var_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe ; Read name of the file selected in the new data file selection dialog box
 StringReplace var_text_file, var_data_file, .dat, .txt                          ; In the just read name replace ".dat" => ".txt" and save into var_text_file
@@ -35,7 +35,7 @@ Send {Tab 3}                                                                    
 Send {Down 2}                                                                   ; Select "Currently visualized signals (expressions)" radio button
 Send {Enter}                                                                    ; Press <Enter>, start exporting the data
 WinWaitActive, Save text file ahk_exe ibaAnalyzer.exe                           ; Go to the "Save text file" dialog box
-ControlSetText, Edit1, %var_text_file%, Save text file ahk_exe ibaAnalyzer.exe  ; Write name of the computed text file into the file saving dialog box
+ControlSetText, Edit1, %var_text_file%, Save text file ahk_exe ibaAnalyzer.exe  ; Put name of the computed text file into the file saving dialog box
 Send {Enter}                                                                    ; Press <Enter> to actually export the text file
 WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar ; Return to the main app window
 Send {Ctrl down}d{Ctrl up}                                                      ; Press <Ctrl-D>, equivalent of menu > "File" > "Open Data File..."
