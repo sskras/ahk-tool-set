@@ -1,9 +1,9 @@
 ; 2022-06-17 saukrs: To use with ibaAnalyzer v7.3.6 (somewhat on demand by mikrmd @ Siemens Energy @ Erlangen).
 
-var_demo_delay := 400 ;ms
+var_demo_delay := 400 ;ms                                                       ; Adjust the thing if debug/demo mode is too slow or too fast for you
 ; Via: https://www.autohotkey.com/docs/commands/SetKeyDelay.htm#Parameters
 var_default_delay := 10 ;ms                                                     ; This input delay value seems to be set by AHK by default, will be used when restoring the pace
-var_current_delay := var_default_delay
+var_current_delay := var_default_delay                                          ; Set the script input pace to the default value
 SetTitleMatchMode, RegEx                                                        ; Matching titles using regular expressions (smart wildcards) as the class of main window get different suffix every run
 SetTitleMatchMode, Slow
 
