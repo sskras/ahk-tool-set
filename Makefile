@@ -3,3 +3,4 @@
 
 all:
 	echo Hello
+	/c/Program\ Files/AutoHotkey/Compiler/Ahk2Exe.exe /in ibaAnalyzer-export.ahk /out ibaAnalyzer-export.exe
