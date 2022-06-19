@@ -22,6 +22,8 @@ Return
 
 ; Via: https://www.autohotkey.com/docs/commands/Menu.htm#Icon
 Menu, Tray, Icon, Shell32.dll, 78
+; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
+SetKeyDelay var_current_delay
 
 ; Via: https://www.autohotkey.com/board/topic/120104-get-editbox-text/#entry683452
 ; Via: https://www.autohotkey.com/docs/commands/ControlGetText.htm#ExBasic
@@ -30,9 +32,6 @@ ControlGetText, var_new_data_file, Edit1, Open new data file  ahk_exe ibaAnalyze
 ; Via: https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar
 StringReplace var_save_text_file, var_new_data_file, .dat, .txt
 ; MsgBox, Read: %var_save_text_file%
-
-; Via: https://www.autohotkey.com/board/topic/94685-slowing-down-the-rate-in-which-the-script-enters-the-text/#entry596708
-SetKeyDelay var_current_delay
 
 ; ControlFocus, Edit1, Open new data file  ahk_exe ibaAnalyzer.exe
 Send {Enter}
