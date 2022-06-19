@@ -8,8 +8,8 @@ SetTitleMatchMode, RegEx
 SetTitleMatchMode, Slow
 
 ; Via: https://www.autohotkey.com/board/topic/6717-how-to-find-autohotkey-directory/#entry40735
-var_cl := DllCall( "GetCommandLine", "str" )
-StringMid, var_path_AHK, var_cl, 2, InStr( var_cl, """", true, 2 )-2
+var_cl := DllCall( "GetCommandLine", "str" )                                    ; Get the whole AHK command line
+StringMid, var_path_AHK, var_cl, 2, InStr( var_cl, """", true, 2 )-2            ; Get the executable name from it (we will use it to extract default AHK icon)
 Return
 
 
