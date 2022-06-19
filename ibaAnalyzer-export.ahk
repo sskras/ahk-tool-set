@@ -33,15 +33,15 @@ ControlGetText, var_data_file, Edit1, Open new data file  ahk_exe ibaAnalyzer.ex
 ; Via: https://www.autohotkey.com/docs/commands/StringReplace.htm#ExVar
 StringReplace var_text_file, var_data_file, .dat, .txt                          ; In the just read name replace ".dat" => ".txt" and save into var_text_file
 
-Send {Enter}
+Send {Enter}                                                                    ; Press <Enter>, open the selected data file
 WinWaitActive, 220209_EL_Harmonic_Rev_C.pdo - ahk_exe ibaAnalyzer.exe, Main Toolbar
-Send {Alt down}f{Alt up}
+Send {Alt down}f{Alt up}                                                        ; Press <Alt-F>, ie. open the "File" menu
 Send {Up 8}{Enter}
-Send {Tab 6}
+Send {Tab 6}                                                                    ; In the "Export Selection" window go down to the "Timebase" box (in the "Time selection" panel)
 Send +{Left 4}60 ; changing "0.2" s defaults to "60" s
-Send {Tab 3}
+Send {Tab 3}                                                                    ; Go to the "Signal selection" panel
 Send {Down 2}
-Send {Enter}
+Send {Enter}                                                                    ; Press <Enter>, start exporting the data
 WinWaitActive, Save text file ahk_exe ibaAnalyzer.exe
 ; Via: https://www.autohotkey.com/boards/viewtopic.php?t=103095#p458907
 ; Via: https://www.autohotkey.com/docs/commands/ControlSetText.htm#ExBasic
