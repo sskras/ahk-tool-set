@@ -49,12 +49,12 @@ Return                                                                          
 ^+d::
 if (var_current_delay = var_default_delay)
 {
-    var_current_delay := var_demo_delay ;ms
+    var_current_delay := var_demo_delay
     MsgBox, Enabling demo mode, setting delay: %var_current_delay% ms
 }
 else
 {
-    var_current_delay := 10 ;ms
+    var_current_delay := var_default_delay
     MsgBox, Disabling demo mode, setting delay: %var_current_delay% ms
 }
 Return
